@@ -1,13 +1,6 @@
-let a: number;
-let b: boolean;
-let c: string;
-let d: any;
-let e: number[] = [1, 2, 3];
-let f: any[] = [1, true, 'a', false];
+let message;
+message = 'abc';
 
-const ColorRed = 0;
-const ColorGreen = 1;
-const ColorBlue = 2;
+let endsWithC = (<string>message).endsWith('c');
 
-enum Color { Red, Green, Blue };
-let backgroundColor = Color.Red;
+let alternativeWay = (message as string).endsWith('c');
