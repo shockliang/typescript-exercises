@@ -1,8 +1,11 @@
-let log = function(message) {
-    console.log(message);
+
+interface Point {
+    x: number,
+    y: number
 }
 
-let doLog = (message) => console.log(message);
+let drawPoint = (point: Point) => {
 
-let msg: string = 'test';
-let doLogInternal = () => console.log(msg);
+}
+
+
