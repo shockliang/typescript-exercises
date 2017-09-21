@@ -1,6 +1,8 @@
-let message;
-message = 'abc';
+let log = function(message) {
+    console.log(message);
+}
 
-let endsWithC = (<string>message).endsWith('c');
+let doLog = (message) => console.log(message);
 
-let alternativeWay = (message as string).endsWith('c');
+let msg: string = 'test';
+let doLogInternal = () => console.log(msg);
