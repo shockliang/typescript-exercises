@@ -1,11 +1,16 @@
 
-interface Point {
-    x: number,
-    y: number
+class Point {
+    x: number;
+    y: number;
+
+    draw() {
+        // ...
+    }
+
+    getDistance(anotehr: Point) {
+        // ...
+    }
 }
 
-let drawPoint = (point: Point) => {
-
-}
 
 
