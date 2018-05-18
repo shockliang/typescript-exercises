@@ -1,8 +1,18 @@
 interface AutomobileInterface {
+  brand?: string;
+  speed?: number;
+  speedMethod?(velocity: number): void;
+}
+
+interface AutomobileInterface2 extends AutomobileInterface {
   brand: string;
   speed: number;
-  speedMethod(velocity: number): void;
 }
+
+const automobile2: AutomobileInterface2 = {
+  brand: "Porsche",
+  speed: 300
+};
 
 const automobile: AutomobileInterface = {
   brand: "BMW",
@@ -20,13 +30,17 @@ function car1(automobile: AutomobileInterface) {
 }
 
 class AutomobileClass implements AutomobileInterface {
-    brand: string = "BMW";
-    speed: number = 200;
-    speedMethod(velocity: number): void {
-        console.log(`this ${this.brand} is going at ${this.speed} miles an hour. Now velocity:${velocity}`);
-    }
+  brand: string = "BMW";
+  speed: number = 200;
+  speedMethod(velocity: number): void {
+    console.log(
+      `this ${this.brand} is going at ${
+        this.speed
+      } miles an hour. Now velocity:${velocity}`
+    );
+  }
 }
 
 let carObj = new AutomobileClass();
-carObj.speed = 225
+carObj.speed = 225;
 carObj.speedMethod(250);

@@ -1,3 +1,8 @@
+"use strict";
+var automobile2 = {
+    brand: "Porsche",
+    speed: 300
+};
 var automobile = {
     brand: "BMW",
     speed: 200,
