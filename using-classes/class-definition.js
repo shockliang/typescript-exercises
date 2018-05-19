@@ -1,9 +1,14 @@
 "use strict";
 var Tree = /** @class */ (function () {
-    //   branch: string;
-    function Tree(branch) {
-        this.branch = branch;
-        this.branch = branch;
+    function Tree(leaf) {
+        this.leaf = leaf;
+        this.leaf = leaf;
     }
+    Tree.prototype.moveLeaf = function () {
+        console.log(this.leaf + " is moving");
+    };
     return Tree;
 }());
+var tree1 = new Tree("Green leaf");
+tree1.moveLeaf();
+console.log(tree1.leaf);
