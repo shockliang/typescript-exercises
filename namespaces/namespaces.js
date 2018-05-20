@@ -1,9 +1,4 @@
 "use strict";
-var myNamespace;
-(function (myNamespace) {
-    function displayData() {
-        return "Some data";
-    }
-    myNamespace.displayData = displayData;
-})(myNamespace || (myNamespace = {}));
+///<reference path="myModule.ts" />
 console.log(myNamespace.displayData());
+/// Using `tsc --outFile namespaces.js to reference myModule.ts 
