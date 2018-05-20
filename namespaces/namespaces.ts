@@ -1,5 +1,8 @@
 namespace myNamespace {
-  function displayData() {
-    console.log("Some data");
+  export function displayData() {
+    return "Some data";
   }
 }
+
+console.log(myNamespace.displayData());
+

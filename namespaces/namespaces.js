@@ -2,6 +2,8 @@
 var myNamespace;
 (function (myNamespace) {
     function displayData() {
-        console.log("Some data");
+        return "Some data";
     }
+    myNamespace.displayData = displayData;
 })(myNamespace || (myNamespace = {}));
+console.log(myNamespace.displayData());
